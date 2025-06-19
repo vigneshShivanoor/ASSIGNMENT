@@ -1,13 +1,13 @@
-import React from 'react';
-import { 
-  LayoutDashboard, 
-  Users, 
-  UserCheck, 
-  Calendar, 
-  Briefcase, 
-  Activity, 
-  User 
-} from 'lucide-react';
+import React from "react";
+import {
+  LayoutDashboard,
+  Users,
+  UserCheck,
+  Calendar,
+  Briefcase,
+  Activity,
+  User,
+} from "lucide-react";
 
 interface MenuItem {
   icon: React.ComponentType<{ size?: number; className?: string }>;
@@ -30,59 +30,59 @@ const Sidebar: React.FC = () => {
   const menuSections: MenuSection[] = [
     {
       items: [
-        { 
-          icon: LayoutDashboard, 
-          label: 'Dashboard',
-          onClick: () => handleMenuClick('Dashboard')
+        {
+          icon: LayoutDashboard,
+          label: "Dashboard",
+          onClick: () => handleMenuClick("Dashboard"),
         },
-        { 
-          icon: Users, 
-          label: 'Accounts',
-          onClick: () => handleMenuClick('Accounts')
+        {
+          icon: Users,
+          label: "Accounts",
+          onClick: () => handleMenuClick("Accounts"),
         },
-      ]
+      ],
     },
     {
-      title: 'Leads',
+      title: "Leads",
       items: [
-        { 
-          icon: UserCheck, 
-          label: 'Contacts',
-          onClick: () => handleMenuClick('Contacts')
+        {
+          icon: UserCheck,
+          label: "Contacts",
+          onClick: () => handleMenuClick("Contacts"),
         },
-        { 
-          icon: Users, 
-          label: 'Leads',
-          onClick: () => handleMenuClick('Leads')
+        {
+          icon: Users,
+          label: "Leads",
+          onClick: () => handleMenuClick("Leads"),
         },
-        { 
-          icon: Calendar, 
-          label: 'Calendar', 
+        {
+          icon: Calendar,
+          label: "Calendar",
           active: true,
-          onClick: () => handleMenuClick('Calendar')
+          onClick: () => handleMenuClick("Calendar"),
         },
-      ]
+      ],
     },
     {
-      title: 'Cases',
+      title: "Cases",
       items: [
-        { 
-          icon: Briefcase, 
-          label: 'Cases',
-          onClick: () => handleMenuClick('Cases')
+        {
+          icon: Briefcase,
+          label: "Cases",
+          onClick: () => handleMenuClick("Cases"),
         },
-        { 
-          icon: Activity, 
-          label: 'Activities',
-          onClick: () => handleMenuClick('Activities')
+        {
+          icon: Activity,
+          label: "Activities",
+          onClick: () => handleMenuClick("Activities"),
         },
-        { 
-          icon: User, 
-          label: 'Users',
-          onClick: () => handleMenuClick('Users')
+        {
+          icon: User,
+          label: "Users",
+          onClick: () => handleMenuClick("Users"),
         },
-      ]
-    }
+      ],
+    },
   ];
 
   return (
@@ -111,13 +111,15 @@ const Sidebar: React.FC = () => {
                     onClick={item.onClick}
                     className={`w-full flex items-center px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 text-left ${
                       item.active
-                        ? 'bg-blue-50 text-blue-700 border-r-2 border-blue-700'
-                        : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                        ? "bg-blue-50 text-blue-700 border-r-2 border-blue-700"
+                        : "text-gray-700 hover:bg-gray-50 hover:text-gray-900"
                     }`}
                   >
-                    <item.icon 
-                      size={18} 
-                      className={`mr-3 ${item.active ? 'text-blue-700' : 'text-gray-500'}`} 
+                    <item.icon
+                      size={18}
+                      className={`mr-3 ${
+                        item.active ? "text-blue-700" : "text-gray-500"
+                      }`}
                     />
                     {item.label}
                   </button>
